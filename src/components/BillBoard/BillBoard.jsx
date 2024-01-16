@@ -124,7 +124,7 @@ const BillBoard = ({ props }) => {
 
   const handleDel = async (rinfo) => {
     try {
-      const response = await fetch(`http://localhost:3001/api/v1/room/del/${rinfo._id}`, {
+      const response = await fetch(`https://totento-backend.onrender.com/api/v1/room/del/${rinfo._id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
