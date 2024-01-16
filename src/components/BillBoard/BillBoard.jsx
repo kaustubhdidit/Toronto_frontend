@@ -34,8 +34,8 @@ const BillBoard = ({ props }) => {
 
   const updateRoom = (currentRoom) => {
     ref.current.click();
-    console.log("Executed");
-    console.log(currentRoom._id)
+    // console.log("Executed");
+    // console.log(currentRoom._id)
     setRoom({
       id: currentRoom._id,
       title: currentRoom.title,
@@ -48,7 +48,7 @@ const BillBoard = ({ props }) => {
   };
 
   const handleClic = (e) => {
-    console.log("Updating", room);
+    // console.log("Updating", room);
     e.preventDefault();
     editRoom(room.id,room.title, room.price, room.description, room.address, room.phone);
     // refClose.current.click();
@@ -56,8 +56,8 @@ const BillBoard = ({ props }) => {
   };
 
   const editVac=async (i)=>{
-    console.log("haha")
-    console.log(i)
+    // console.log("haha")
+    // console.log(i)
 
     // console.log(price)
     // API Call
@@ -82,10 +82,10 @@ const BillBoard = ({ props }) => {
   
 
   const editRoom=async (id, title,price, description, address, phone)=>{
-    console.log("haha")
-    console.log(id)
+    // console.log("haha")
+    // console.log(id)
 
-    console.log(price)
+    // console.log(price)
     // API Call
     const response = await fetch(`https://totento-backend.onrender.com/api/v1/room/edit/${id}`, {
       method: "PUT", 
