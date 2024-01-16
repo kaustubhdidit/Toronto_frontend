@@ -18,8 +18,8 @@ const Category = ({ categories }) => {
     // Fetch data from the API
     axios.get('https://totento-backend.onrender.com/api/v1/room/roomAll')
       .then((res) => {
-        console.log("first")
-        console.log(res.data.rooms)
+        // console.log("first")
+        // console.log(res.data.rooms)
         setRooms(res.data.rooms);  // Fix the data assignment here
       })
       .catch((error) => {
