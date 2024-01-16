@@ -1,6 +1,6 @@
 import "./BillBoard.scss";
 import React, { useState, useEffect , useRef} from 'react';
-import { getStorage, ref, deleteObject } from "firebase/storage";
+import { getStorage, ref as firebaseRef, deleteObject } from "firebase/storage";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 // import React, { useState } from "react";
@@ -144,8 +144,7 @@ const BillBoard = ({ props }) => {
 
   const deleteImage = async (imageUrl) => {
     try {
-      // console.log(imageUrl);
-      const storageRef = ref(imageDb, imageUrl);
+      const storageRef = firebaseRef(imageDb, imageUrl);
       await deleteObject(storageRef);
       console.log("Image deleted successfully from Firebase Storage");
     } catch (error) {
