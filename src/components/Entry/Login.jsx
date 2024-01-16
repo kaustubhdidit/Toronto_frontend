@@ -26,7 +26,7 @@ const Login = (props) => {
         });
         
         const json = await response.json()
-        console.log(json)
+        // console.log(json)
         if(json.success){
           
           // const userId = extractUserIdFromToken(token);
@@ -36,7 +36,7 @@ const Login = (props) => {
           const token = localStorage.getItem('token');
           // console.log(token);
           props.showAlert("Logged in successfully", "success")
-          console.log(localStorage.getItem('token').json)
+          // console.log(localStorage.getItem('token').json)
           navigate("/");
        
         }
